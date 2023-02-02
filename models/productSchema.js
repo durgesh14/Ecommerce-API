@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-//Creating Schema for Products [fields: id, name, quantity]
 
+//Creating Schema for Products [fields: id, name, quantity]
 const productSchema = new mongoose.Schema(
   {
     name: {
