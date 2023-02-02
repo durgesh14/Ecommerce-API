@@ -1,5 +1,7 @@
 # Ecommerce-API
 
+Hosted URL:  `https://ecommerce-api-sle6.onrender.com/`
+
 # Introduction
 This is a simple REST API implementation using Node.js, Express.js and MongoDB. The API allows to perform CRUD operations on a Product resource.
 
