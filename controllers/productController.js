@@ -42,23 +42,17 @@ module.exports.getProducts = async (req, res) => {
 
 //handling deleting of product
 module.exports.deleteProduct = async (req, res) => {
-  const id = req.params.id; //getting id from params
-  try {
-    //Deleting product after finding it using id.
-    await Product.findByIdAndDelete(id, (err, product) => {
-      if (err) {
-        res
-          .status(500)
-          .json({ error: "Error while retrieving products from database." });
-      }
+    const id = req.params.id; //getting id from params
+    try {
+      //Deleting product after finding it using id.
+      const product = await Product.findByIdAndDelete(id);
       if (!product) return res.status(404).send({ error: "Product not found" });
       //returning success msg.
       return res.json({ data: { message: "product deleted" } });
-    });
-  } catch (error) {
-    res.status(500).send({ error: error.message });
-  }
-};
+    } catch (error) {
+      res.status(500).send({ error: error.message });
+    }
+  };
 
 //handling updation of product
 module.exports.updateProduct = async (req, res) => {
