@@ -2,6 +2,8 @@
 
 Hosted URL:  `https://ecommerce-api-sle6.onrender.com/`
 
+## Import postman json export : Ecommerce-API.postman_collection.json
+
 # Introduction
 This is a simple REST API implementation using Node.js, Express.js and MongoDB. The API allows to perform CRUD operations on a Product resource.
 
